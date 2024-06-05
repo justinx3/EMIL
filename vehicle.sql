@@ -1,0 +1,13 @@
+create table veh(veh_id varchar(15)primary key,veh_name varchar(20),cate varchar(15),stock int, price int);
+insert into veh values('100','Bike','2-wheeler','8','60000');
+insert into veh values('101','Car','4-wheeler','5','80000');
+insert into veh values('102','Auto','3-wheeler','4','30000');
+insert into veh values('103','Cycle','2-wheeler','7','40000');
+insert into veh values('104','Car','4-wheeler','3','75000');
+select * from veh;
+select * from veh order by veh_name desc;
+select veh_name,cate from veh where price between 70000 and 90000;
+select veh_id,veh_name,price from veh where cate in('2-wheeler','4-wheeler');
+select * from veh where stock between 5 and 10;
+select veh_name from veh where veh_name LIKE 'A%' or veh_name LIKE 'a%';
+select * from veh where cate not in ('4-wheeler');
